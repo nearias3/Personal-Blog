@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Add styling for the submit button
+/* add styling for the mode toggle button
+/* add styling to form box after setting up js for it
+/* add some style for what happens when you hover over the buttons?
