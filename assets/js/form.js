@@ -14,9 +14,25 @@ themeSwitcher.addEventListener("click", function () {
   }
 });
 
+    const username = document.getElementById('username');
+    const title = document.getElementById('title');
+    const content = document.getElementById('content');
+    const errorMessage = document.getElementById('errorMessage');
 
+document.getElementById('blogForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    username: username.value;
+    title: title.value;
+    content: content.value;
 
-// prevent default event
+    const blogPost = {
+      username,
+      title,
+      content,
+    };
+
+});
+
 // set up form values
 // set up error message for form
 // how to store blogs in local storage???
