@@ -1,17 +1,5 @@
-const themeSwitcher = document.querySelector('#theme-switcher');
-const container = document.querySelector('.container');
-
-let mode = 'dark'
-
-themeSwitcher.addEventListener('click', function(event) {
-    if (mode === 'dark') {
-        mode = 'light';
-    container.setAttribute('class','light');
-}
-
-else {
-    mode = 'dark';
-    container.setAttribute('class', 'dark');
-}
-});
-
+// prevent default event
+// set up form values
+// set up error message for form
+// how to store blogs in local storage???
+// add event listener for light/dark mode toggle
