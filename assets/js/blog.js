@@ -16,3 +16,7 @@ themeSwitcher.addEventListener("click", function () {
     container.setAttribute("class", "dark");
   }
 });
+
+document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
