@@ -9,9 +9,11 @@ themeSwitcher.addEventListener("click", function () {
   if (mode === "dark") {
     mode = "light";
     container.setAttribute("class", "light");
+    themeSwitcher.innerHTML = '<i class="fas fa-sun"></i>';
   } else {
     mode = "dark";
     container.setAttribute("class", "dark");
+    themeSwitcher.innerHTML = '<i class="fas fa-moon"></i>';
   }
 });
 

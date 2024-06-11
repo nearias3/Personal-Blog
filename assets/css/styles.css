@@ -19,7 +19,26 @@ header, footer {
     color: black;
 }
 
+#modeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: inherit;
+}
 
-/* For the mode toggle, I want the button to be a little sun when I am in light mode and a little moon when I am in dark mode.
+.light #modeToggle .fa-sun {
+    display: inline;
+}
 
+.light #modeToggle .fa-moon {
+    display: none;
+}
 
+.dark #modeToggle .fa-sun {
+    display: none;
+}
+
+.dark #modeToggle .fa-moon {
+    display: inline;
+}
