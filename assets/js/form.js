@@ -15,30 +15,22 @@ themeSwitcher.addEventListener("click", function () {
   }
 });
 
-
-document.getElementById("blogForm").addEventListener("submit", function (event) {
+document
+  .getElementById("blogForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
-    const username = document.getElementById("username");
-    const title = document.getElementById("title");
-    const content = document.getElementById("content");
+    const username = document.getElementById("username").value;
+    const title = document.getElementById("title").value;
+    const content = document.getElementById("content").value;
     const errorMessage = document.getElementById("errorMessage");
-    
-    
-    username: username.value;
-    title: title.value;
-    content: content.value;
 
-    const blogPost = {
-      username,
-      title,
-      content,
-    };
+    if (!username || !title || !content) {
+      errorMessage.textContent = "Please fill in all fields.";
+      return;
+    }
+
+    errorMessage.textContent = "";
 
     storeBlogPost(username, title, content);
-
-    window.location.href='blog.html';
+    window.location.href = "blog.html";
   });
-
-
-//  TODO: Blog posts are still not showing in the blog html
-// TODO: hitting the submit button doesn't take me to the blog html posts page
