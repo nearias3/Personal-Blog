@@ -1,5 +1,4 @@
-// when I add this code, mode toggle stops working
-// import { storeBlogPost } from "./logic.js";
+import { storeBlogPost } from "./logic.js";
 
 const themeSwitcher = document.getElementById("modeToggle");
 const container = document.body;
@@ -16,15 +15,15 @@ themeSwitcher.addEventListener("click", function () {
   }
 });
 
-const username = document.getElementById("username");
-const title = document.getElementById("title");
-const content = document.getElementById("content");
-const errorMessage = document.getElementById("errorMessage");
 
-document
-  .getElementById("blogForm")
-  .addEventListener("submit", function (event) {
+document.getElementById("blogForm").addEventListener("submit", function (event) {
     event.preventDefault();
+    const username = document.getElementById("username");
+    const title = document.getElementById("title");
+    const content = document.getElementById("content");
+    const errorMessage = document.getElementById("errorMessage");
+    
+    
     username: username.value;
     title: title.value;
     content: content.value;
@@ -34,4 +33,12 @@ document
       title,
       content,
     };
+
+    storeBlogPost(username, title, content);
+
+    window.location.href='blog.html';
   });
+
+
+//  TODO: Blog posts are still not showing in the blog html
+// TODO: hitting the submit button doesn't take me to the blog html posts page

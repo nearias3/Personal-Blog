@@ -1,6 +1,12 @@
-// blogs are added from each submit into the containers
+//When I add this code, mode toggle stops working
+import { getBlogPosts } from "./logic.js";
 
+document.addEventListener('DOMContentLoaded', () {
+  const postsContainer = document.getElementById('posts');
+  const blogPosts = getBlogPosts();
+});
 
+// TODO: blogs are added from each submit into the containers
 
 const themeSwitcher = document.getElementById("modeToggle");
 const container = document.body;
@@ -17,11 +23,6 @@ themeSwitcher.addEventListener("click", function () {
   }
 });
 
-document.getElementById('backButton').addEventListener('click', function() {
-    window.location.href = 'index.html';
+document.getElementById("backButton").addEventListener("click", function () {
+  window.location.href = "index.html";
 });
-
-
-//When I add this code, mode toggle stops working
-// import { getBlogPosts } from "./logic.js";
-
